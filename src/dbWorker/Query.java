@@ -4,6 +4,7 @@ import com.mysql.cj.xdevapi.JsonArray;
 import com.mysql.cj.xdevapi.JsonParser;
 import jdk.nashorn.internal.parser.JSONParser;
 import logInBean.LogInBean;
+import players.PlayerBean;
 import teams.teamInfo.TeamInfoBean;
 
 import java.sql.ResultSet;
@@ -142,4 +143,86 @@ public class Query {
             e.printStackTrace();
         }
     }
+
+    public void setRaiting(String name, int raiting){
+        String query = "UPDATE users SET raiting = '"+raiting+"' WHERE name ='"+name+"'";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setCurVoice(String name, int curVoice){
+        String query = "UPDATE users SET curVoice = '"+curVoice+"' WHERE name ='"+name+"'";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setAvarageRaiting(String name, double avarageRaiting){
+        String query = "UPDATE users SET avarageRaiting = '"+avarageRaiting+"' WHERE name ='"+name+"'";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Integer getUserRaiting(String name){
+        String query = "select raiting from users where name ='"+ name +"'";
+        PlayerBean playerBean = new PlayerBean();
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                playerBean.setRaiting( resultSet.getInt("raiting"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        int raiting = playerBean.getRaiting();
+        return raiting;
+    }
+
+    public Double getUserAvarageRaiting(String name){
+        String query = "select avarageRaiting from users where name ='"+ name +"'";
+        PlayerBean playerBean = new PlayerBean();
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                playerBean.setAvarageRaiting(resultSet.getDouble("avarageRaiting"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        double avarageRaiting = playerBean.getAvarageRaiting();
+        return avarageRaiting;
+    }
+
+    public Integer getUserCurVoice(String name){
+        String query = "select curVoice from users where name ='"+ name +"'";
+        PlayerBean playerBean = new PlayerBean();
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                playerBean.setCurVoice( resultSet.getInt("curVoice"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        int curVoice = playerBean.getCurVoice();
+        return curVoice;
+    }
+
 }

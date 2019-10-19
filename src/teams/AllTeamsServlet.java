@@ -18,8 +18,7 @@ public class AllTeamsServlet extends HttpServlet {
         Query query = new Query();
         response.setContentType("text/html;charset=utf-8");
         ArrayList teams = new ArrayList();
-        /*GenerateAllTeamsTable generateAllTeamsTable = new GenerateAllTeamsTable();
-        generateAllTeamsTable.generateAllTeams(request,response,out);*/
+
         teams = query.getAllTeam(teams);
         request.setAttribute("teams", teams);
         getServletContext()

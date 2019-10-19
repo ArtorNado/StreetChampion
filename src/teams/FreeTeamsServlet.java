@@ -15,8 +15,6 @@ public class FreeTeamsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         response.setContentType("text/html;charset=utf-8");
-        /*GenerateFreeTeamsTable generateFreeTeamsTable = new GenerateFreeTeamsTable();
-        generateFreeTeamsTable.generateFreeTeams(request,response,out);*/
         ArrayList teams = new ArrayList();
 
 

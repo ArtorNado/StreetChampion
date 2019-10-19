@@ -100,4 +100,13 @@
         <url-pattern>/playerinfo</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AddRaitingServlet</servlet-name>
+        <servlet-class>players.AddRaitingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddRaitingServlet</servlet-name>
+        <url-pattern>/addRaiting</url-pattern>
+    </servlet-mapping>
+
 </web-app>

@@ -54,8 +54,36 @@ public class Query {
         return false;
     }
 
+    public void addUserInTeam(int userId, int teamId){
+        String query = "UPDATE users SET teamId = '"+teamId+"' WHERE id ='"+userId+"'";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public Integer getTeamId(String name){
         String query = "select teamId from teams where title ='"+ name +"'";
+        TeamInfoBean teamInfoBean = new TeamInfoBean();
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                teamInfoBean.setId( resultSet.getInt(1));
+                System.out.println(teamInfoBean.getId());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        int id = teamInfoBean.getId();
+        return id;
+    }
+
+    public Integer getTeamId(int captainId){
+        String query = "select teamId from teams where captainId ='"+ captainId +"'";
         TeamInfoBean teamInfoBean = new TeamInfoBean();
         try {
             Statement statement = worker.getConnection().createStatement();
@@ -107,19 +135,33 @@ public class Query {
 
     public Integer getUserId(String name){
         String query = "select id from users where name ='"+ name +"'";
-        TeamInfoBean teamInfoBean = new TeamInfoBean();
+        PlayerBean playerBean = new PlayerBean();
         try {
             Statement statement = worker.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
-                teamInfoBean.setId( resultSet.getInt(1));
-                System.out.println(teamInfoBean.getId());
+                playerBean.setId( resultSet.getInt("id"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        int id = teamInfoBean.getId();
-        return id;
+
+        return playerBean.getId();
+    }
+
+    public String getUserName(int userId){
+        String query = "select name from users where id ='"+ userId +"'";
+        PlayerBean playerBean = new PlayerBean();
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                playerBean.setName( resultSet.getString("name"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return playerBean.getName();
     }
 
     public void createNewTeam(String name, int userId){
@@ -143,6 +185,23 @@ public class Query {
             e.printStackTrace();
         }
     }
+
+    public Boolean checkTeamAdmin(int userId){
+        String query = "select teamId from teams where captainId ='"+ userId +"'";
+        boolean answer = false;
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                answer = true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return answer;
+    }
+
+
 
     public void setRaiting(String name, int raiting){
         String query = "UPDATE users SET raiting = '"+raiting+"' WHERE name ='"+name+"'";

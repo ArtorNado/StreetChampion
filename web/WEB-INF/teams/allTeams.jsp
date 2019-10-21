@@ -18,6 +18,7 @@
             <a href="/teaminfo?name=${teams}">  <c:out value="${teams}" />  </a>
         </li>
     </c:forEach>
+
 </ul>
 </body>
 </html>

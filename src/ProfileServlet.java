@@ -23,7 +23,6 @@ public class ProfileServlet extends HttpServlet {
         }
         LogInBean logInBean = new LogInBean(request.getParameter("login"), request.getParameter("password"));
         response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
         HttpSession session = request.getSession();
         int userId = query.getUserId(logInBean.getName());
         session.setAttribute("userId", userId);

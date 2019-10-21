@@ -1121,123 +1121,176 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="282" parent="7" name="teams">
+    <table id="282" parent="7" name="notifications">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="283" parent="7" name="tourmaments">
+    <table id="283" parent="7" name="teams">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <table id="284" parent="7" name="users"/>
-    <column id="285" parent="282" name="teamId">
+    <table id="284" parent="7" name="tourmaments">
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <table id="285" parent="7" name="users"/>
+    <column id="286" parent="282" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="282" name="title">
+    <column id="287" parent="282" name="type">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="282" name="idRecipient">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="289" parent="282" name="idSender">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="290" parent="282" name="Recipient_idx">
+      <ColNames>idRecipient</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="291" parent="282" name="Sender_idx">
+      <ColNames>idSender</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="292" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="293" parent="282" name="Recipient">
+      <ColNames>idRecipient</ColNames>
+      <RefSchemaName>streetchampions</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="294" parent="282" name="Sender">
+      <ColNames>idSender</ColNames>
+      <RefSchemaName>streetchampions</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="295" parent="283" name="teamId">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="283" name="title">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="282" name="freePlaces">
+    <column id="297" parent="283" name="freePlaces">
       <Position>3</Position>
       <DataType>tinyint(4)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="282" name="captainId">
+    <column id="298" parent="283" name="captainId">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="289" parent="282" name="PRIMARY">
+    <key id="299" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teamId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="290" parent="283" name="id">
+    <column id="300" parent="284" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="283" name="teams">
+    <column id="301" parent="284" name="teams">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="292" parent="283" name="PRIMARY">
+    <key id="302" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="293" parent="284" name="id">
+    <column id="303" parent="285" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="284" name="name">
+    <column id="304" parent="285" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="284" name="password">
+    <column id="305" parent="285" name="password">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="284" name="teamId">
+    <column id="306" parent="285" name="teamId">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="284" name="myTeamId">
+    <column id="307" parent="285" name="myTeamId">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="284" name="raiting">
+    <column id="308" parent="285" name="raiting">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="284" name="curVoice">
+    <column id="309" parent="285" name="curVoice">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="284" name="avarageRaiting">
+    <column id="310" parent="285" name="avarageRaiting">
       <Position>8</Position>
       <DataType>double|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="301" parent="284" name="teamId">
+    <index id="311" parent="285" name="teamId">
       <ColNames>teamId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="302" parent="284" name="users_ibfk_2_idx">
+    <index id="312" parent="285" name="users_ibfk_2_idx">
       <ColNames>myTeamId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="303" parent="284" name="PRIMARY">
+    <key id="313" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="304" parent="284" name="users_ibfk_1">
+    <foreign-key id="314" parent="285" name="users_ibfk_1">
       <ColNames>teamId</ColNames>
       <RefSchemaName>streetchampions</RefSchemaName>
       <RefTableName>teams</RefTableName>

@@ -109,4 +109,31 @@
         <url-pattern>/addRaiting</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>NotificationsServlet</servlet-name>
+        <servlet-class>notifications.NotificationsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NotificationsServlet</servlet-name>
+        <url-pattern>/notifications</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NotificationsIntroductionServlet</servlet-name>
+        <servlet-class>notifications.NotificationsIntroductionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NotificationsIntroductionServlet</servlet-name>
+        <url-pattern>/notificationsintroduction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TrueAnswerServlet</servlet-name>
+        <servlet-class>notifications.TrueAnswerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TrueAnswerServlet</servlet-name>
+        <url-pattern>/trueanswer</url-pattern>
+    </servlet-mapping>
+
 </web-app>

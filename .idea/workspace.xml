@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16e9653d-5a2c-4eb9-bce2-3f8fce15cd04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Cookies.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/LoginPage/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/LoginPage/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/LoginPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/LoginPageServlet.class" afterDir="false" />
@@ -18,11 +17,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/ProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StreetChampion/ProfileServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/dbWorker/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StreetChampion/dbWorker/Query.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/logInBean/LogInBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StreetChampion/logInBean/LogInBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbWorker/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbWorker/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logInBean/LogInBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logInBean/LogInBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/LoginPage/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/LoginPage/login.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -136,7 +130,7 @@
         <counts>
           <entry key="JAVA" value="11030" />
           <entry key="JSP" value="2420" />
-          <entry key="PLAIN_TEXT" value="86" />
+          <entry key="PLAIN_TEXT" value="94" />
           <entry key="SQL" value="95" />
           <entry key="Scratch" value="6" />
           <entry key="XML" value="480" />
@@ -144,6 +138,7 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
+          <entry key="git.branch.checkout.local" value="1" />
           <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
@@ -154,8 +149,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/notifications/notificationsIntroduction.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="388">
+              <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -736,7 +731,7 @@
       <workItem from="1571496532117" duration="10959000" />
       <workItem from="1571660469043" duration="6944000" />
       <workItem from="1571729732420" duration="3969000" />
-      <workItem from="1571765897979" duration="311000" />
+      <workItem from="1571765897979" duration="564000" />
     </task>
     <task id="LOCAL-00001" summary="add Raiting System">
       <created>1571496873731</created>
@@ -752,11 +747,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571667239900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add Cookies">
+      <created>1571766410146</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571766410146</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114765000" />
+    <option name="totallyTimeSpent" value="115018000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -781,7 +783,7 @@
       <window_info id="Web" order="7" sideWeight="0.5248322" side_tool="true" weight="0.1932886" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3342282" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3342282" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -814,7 +816,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add Raiting System" />
     <MESSAGE value="add Notification System" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Notification System" />
+    <MESSAGE value="add Notification System1" />
+    <MESSAGE value="add Cookies" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Cookies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1108,6 +1112,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="116" column="32" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1134,8 +1141,8 @@
     <entry file="file://$PROJECT_DIR$/src/CookiesServlet.java" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/notifications/notificationsIntroduction.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="388">
+          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
         </state>
       </provider>
     </entry>

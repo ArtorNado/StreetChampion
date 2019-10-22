@@ -54,6 +54,21 @@ public class Query {
         return false;
     }
 
+    public String getPassword(String name){
+        String query = "select password from users where name='"+name+"'";
+        String password = "";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                password = resultSet.getString("password");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return password;
+    }
+
     public void addUserInTeam(int userId, int teamId){
         String query = "UPDATE users SET teamId = '"+teamId+"' WHERE id ='"+userId+"'";
         try {

@@ -15,24 +15,33 @@ import java.io.PrintWriter;
 public class ProfileServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Query query = new Query();
-        if((request.getParameter("login").isEmpty())) {
-            System.out.println("null");
+        Cookies cookies = new Cookies();
+        if ((request.getParameter("login").isEmpty()) || (request.getParameter("password")).isEmpty()) {
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
                     .forward(request, response);
         }
-        LogInBean logInBean = new LogInBean(request.getParameter("login"), request.getParameter("password"));
-        response.setContentType("text/html");
+        String password = request.getParameter("password");
+        String login = request.getParameter("login");
+        String userPassword = query.getPassword(login);
+        int userId = query.getUserId(login);
+        String[] value = request.getParameterValues("checkBox");
+        if (value != null) {
+            if (value[0].equals("on")) {
+                cookies.createCookies(request,response,login,password);
+
+            }
+        }
+        LogInBean logInBean = new LogInBean(login, password);
         HttpSession session = request.getSession();
-        int userId = query.getUserId(logInBean.getName());
         session.setAttribute("userId", userId);
-        session.setAttribute("userName", logInBean.getName());
-        if((logInBean.getName() != null) && (query.searchUser(logInBean.getName()))) {
-            request.setAttribute("userr", logInBean);
-            getServletContext()
-                    .getRequestDispatcher("/WEB-INF/profilePage/profile.jsp")
-                    .forward(request, response);
-        } else{
+        session.setAttribute("userName", login);
+        if ((login != null) && (query.searchUser(login)) && ((password.equals(userPassword)))) {
+                request.setAttribute("userr", logInBean);
+                getServletContext()
+                        .getRequestDispatcher("/WEB-INF/profilePage/profile.jsp")
+                        .forward(request, response);
+        } else {
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
                     .forward(request, response);

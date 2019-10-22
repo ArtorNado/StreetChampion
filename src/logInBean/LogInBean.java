@@ -8,6 +8,7 @@ public class LogInBean implements Serializable {
     private String password;
     private int id;
 
+
     public int getId() {
         return id;
     }

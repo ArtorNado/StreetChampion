@@ -1,3 +1,5 @@
+import logInBean.LogInBean;
+
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +14,18 @@ public class LoginPageServlet extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        Cookies cookies = new Cookies();
+        String login = "";
+        String password = "";
+        Boolean haveCookey;
+        haveCookey = cookies.checkCookies(request,response,login,password);
+        if (haveCookey) {
+            login = (String) request.getAttribute("loginCookies");
+            password = (String) request.getAttribute("passwordCookies");
+        }
+        LogInBean logInBean = new LogInBean(login,password);
+        request.setAttribute("cookies", logInBean);
+
 
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();

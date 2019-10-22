@@ -12,9 +12,9 @@
     </head>
 <body>
 <form method="post" action="/profile">
-              Login<input type="text" name="login" value="">
-              Password<input name="password" type="text" value="">
-              Remember me<input type="checkbox" name="name">
+              Login<input type="text" name="login" value="${cookies.name}">
+              Password<input name="password" type="password" value="${cookies.password}">
+              Remember me<input type="checkbox" name="checkBox">
               <input type="submit" value="Log in">
         </form>
 </body>

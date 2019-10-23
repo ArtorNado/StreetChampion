@@ -37,7 +37,7 @@ public class PlayerBean implements Serializable {
         this.avarageRaiting = avarageRaiting;
     }
 
-    public PlayerBean(String firstName, String secondName, int age, double avarageRaiting, String teamName){
+    public PlayerBean(String firstName, String secondName, int age, double avarageRaiting){
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;

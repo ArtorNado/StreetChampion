@@ -1,3 +1,4 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import dbWorker.DBworker;
 import dbWorker.Query;
 import logInBean.LogInBean;
@@ -38,13 +39,19 @@ public class ProfileServlet extends HttpServlet {
         String firstName = query.getUserFirstName(login);
         String secondName = query.getUserSecondName(login);
         double avarageRaiting = query.getUserAvarageRaiting(login);
-        String teamName = query.getTeam(userId);
-        PlayerBean playerBean = new PlayerBean(firstName, secondName, age, avarageRaiting, teamName);
+        int teamId = query.getTeam(userId);
+        System.out.println("teamdId" + teamId);
+        PlayerBean playerBean = new PlayerBean(firstName, secondName, age, avarageRaiting);
         HttpSession session = request.getSession();
+        int check = 1;
+        if( query.checkTeam(userId) == null) {
+             check = -1;
+        }
         session.setAttribute("userId", userId);
         session.setAttribute("userName", login);
         if ((login != null) && (query.searchUser(login)) && ((password.equals(userPassword)))) {
-            request.setAttribute("teamName", teamName);
+            request.setAttribute("teamId", teamId);
+            request.setAttribute("check", check);
             request.setAttribute("userr", logInBean);
             request.setAttribute("userData", playerBean);
             getServletContext()

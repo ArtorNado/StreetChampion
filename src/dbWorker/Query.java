@@ -196,19 +196,19 @@ public class Query {
         return name;
     }
 
-    public String getTeam(int userId){
+    public Integer getTeam(int userId){
         String query = "select teamId from users where id ='"+ userId +"'";
-        String name = "";
+        int id = 0;
         try {
             Statement statement = worker.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
-                name = resultSet.getString("title");
+                id = resultSet.getInt("teamId");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return name;
+        return id;
     }
 
     public void createNewTeam(String name, int userId){

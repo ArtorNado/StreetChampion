@@ -13,7 +13,7 @@
 <body>
     <form method="post" action="/menu">
         <p>Name: ${userr.name}</p>
-        <p>Age: ${userr.password}</p>
+        <%--<p>Password: ${userr.password}</p>--%>
         <p><input type="submit" value="Menu"></p>
     </form>
 </body>

@@ -11,8 +11,10 @@
 <head>
     <title>Title</title>
 </head>
-<body>
+<body>z
+<h1>HELLLOOOO</h1>
 <ul>
+
     <c:forEach var="teams" items="${teams}">
         <li>
             <a href="/teaminfo?name=${teams}">  <c:out value="${teams}" />  </a>

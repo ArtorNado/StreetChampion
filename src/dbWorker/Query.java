@@ -18,25 +18,10 @@ public class Query {
 
     DBworker worker = new DBworker();
 
-    public void firstQuery() {
-        String query = "select * from users";
-        try {
-            Statement statement = worker.getConnection().createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-            while (resultSet.next()){
-                LogInBean logInBean = new LogInBean();
-                logInBean.setName(resultSet.getString(2));
-                logInBean.setName(resultSet.getString(2));
-                System.out.println(logInBean.getName().toString());
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
-    public Boolean searchUser(String visitorName){
+    public Boolean searchUser(String login){
         String answer = "";
-        String query = "select * from users where name='"+visitorName+"'";
+        String query = "select * from users where name='"+login+"'";
         try {
             Statement statement = worker.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
@@ -48,7 +33,7 @@ public class Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(answer.equals(visitorName)) {
+        if(answer.equals(login)) {
             return true;
         } else
         return false;
@@ -131,6 +116,23 @@ public class Query {
         return team;
     }
 
+    public ArrayList getFreeTeam(ArrayList team){
+        String query = "select title from teams WHERE freePlaces ='1'";
+        TeamInfoBean teamInfoBean = new TeamInfoBean();
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                teamInfoBean.setName(resultSet.getString("title"));
+                System.out.println(teamInfoBean.getName());
+                team.add(teamInfoBean.getName());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return team;
+    }
+
     public ArrayList getAllPlayers(ArrayList players, int teamId){
         String query = "select name from users where teamId='"+teamId+"'";
         TeamInfoBean teamInfoBean = new TeamInfoBean();
@@ -179,6 +181,36 @@ public class Query {
         return playerBean.getName();
     }
 
+    public String getTeamName(int teamId){
+        String query = "select title from teams where teamId ='"+ teamId +"'";
+        String name = "";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                 name = resultSet.getString("title");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
+    }
+
+    public String getTeam(int userId){
+        String query = "select teamId from users where id ='"+ userId +"'";
+        String name = "";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                name = resultSet.getString("title");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
+    }
+
     public void createNewTeam(String name, int userId){
         String query = "INSERT INTO teams(title, freePlaces, captainId) VALUES('"+name+"',0, '"+userId+"')";
         try {
@@ -190,11 +222,24 @@ public class Query {
         }
     }
 
-    public void setTeamAdmin(String name, int teamId){
-        String query = "UPDATE users SET myTeamId = '"+teamId+"' WHERE name ='"+name+"'";
+    public void createNewUser(String name, String password, String firstName, String secondName, int age){
+        String query = "INSERT INTO users(name,password, firstName, secondName, age) VALUES('"+name+"', '"+password+"','"+firstName+"','"+secondName+"','"+age+"')";
         try {
             Statement statement = worker.getConnection().createStatement();
             statement.addBatch(query);
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setTeamAdmin(String name, int teamId){
+        String query = "UPDATE users SET myTeamId = '"+teamId+"' WHERE name ='"+name+"'";
+        String query2 = "UPDATE users SET teamId = '"+teamId+"' WHERE name ='"+name+"'";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.addBatch(query2);
             statement.executeBatch();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -208,6 +253,38 @@ public class Query {
             Statement statement = worker.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
+                answer = true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return answer;
+    }
+
+    public Integer getTeamAdmin(int teamId){
+        String query = "select captainId from teams where teamId ='"+ teamId +"'";
+        boolean answer = false;
+        int id = 0;
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                id = resultSet.getInt("captainId");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+
+    public Boolean checkTeam(int userId){
+        String query = "select teamId from users where id ='"+ userId +"'";
+        boolean answer = false;
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                if(resultSet.getInt("teamId") != 0)
                 answer = true;
             }
         } catch (SQLException e) {
@@ -258,7 +335,7 @@ public class Query {
             Statement statement = worker.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
-                playerBean.setRaiting( resultSet.getInt("raiting"));
+                playerBean.setRaiting(resultSet.getInt("raiting"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -297,6 +374,51 @@ public class Query {
         }
         int curVoice = playerBean.getCurVoice();
         return curVoice;
+    }
+
+    public String getUserFirstName(String login){
+        String query = "select firstName from users where name ='"+ login +"'";
+        String firstName = "";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                firstName = resultSet.getString("firstName");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return firstName;
+    }
+
+    public String getUserSecondName(String login){
+        String query = "select secondName from users where name ='"+ login +"'";
+        String secondName = "";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                secondName = resultSet.getString("secondName");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return secondName;
+    }
+
+    public Integer getUserAge(String login){
+        String query = "select age from users where name ='"+ login +"'";
+        int age = 0;
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                age = resultSet.getInt("age");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return age;
     }
 
 }

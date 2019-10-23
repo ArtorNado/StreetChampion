@@ -9,13 +9,16 @@
 <html>
 <head>
     <title>LoginPage</title>
-    </head>
+</head>
 <body>
 <form method="post" action="/profile">
-              Login<input type="text" name="login" value="${cookies.name}">
-              Password<input name="password" type="password" value="${cookies.password}">
-              Remember me<input type="checkbox" name="checkBox">
-              <input type="submit" value="Log in">
-        </form>
+    Login<input type="text" name="login" value="${cookies.name}">
+    Password<input name="password" type="password" value="${cookies.password}">
+    Remember me<input type="checkbox" name="checkBox">
+    <input type="submit" value="Log in">
+</form>
+<form method="post" action="/registration">
+    <input type="submit" value="Registration">
+</form>
 </body>
 </html>

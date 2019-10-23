@@ -12,8 +12,12 @@
 </head>
 <body>
     <form method="post" action="/menu">
-        <p>Name: ${userr.name}</p>
-        <p>Age: ${userr.password}</p>
+        <p>Login: ${userr.name}</p>
+        <p>First Name: ${userData.firstName}</p>
+        <p>Secon Name: ${userData.secondName}</p>
+        <p>Age: ${userData.age}</p>
+        <p>Raiting: ${userData.avarageRaiting }</p>
+    <%--<p>Password: ${userr.password}</p>--%>
         <p><input type="submit" value="Menu"></p>
     </form>
 </body>

@@ -1251,12 +1251,13 @@
     <column id="306" parent="285" name="teamId">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="307" parent="285" name="myTeamId">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="308" parent="285" name="raiting">
@@ -1277,24 +1278,36 @@
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="311" parent="285" name="teamId">
+    <column id="311" parent="285" name="firstName">
+      <Position>9</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="285" name="secondName">
+      <Position>10</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="313" parent="285" name="age">
+      <Position>11</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="314" parent="285" name="teamId">
       <ColNames>teamId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="312" parent="285" name="users_ibfk_2_idx">
+    <index id="315" parent="285" name="users_ibfk_2_idx">
       <ColNames>myTeamId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="313" parent="285" name="PRIMARY">
+    <key id="316" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="314" parent="285" name="users_ibfk_1">
-      <ColNames>teamId</ColNames>
-      <RefSchemaName>streetchampions</RefSchemaName>
-      <RefTableName>teams</RefTableName>
-      <RefColNames>teamId</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>

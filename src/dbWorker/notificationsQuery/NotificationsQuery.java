@@ -107,6 +107,18 @@ public class NotificationsQuery {
         return idList;
     }
 
+    public void createNotificationType1(int idRecipient, int idSender){
+        String query = "INSERT INTO notifications(type, idRecipient, idSender) VALUES (1,'"+idRecipient+"','"+idSender+"')";
+        NotificationBean notificationBean = new NotificationBean();
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void deleteNotification(int notId){
         String query = "DELETE FROM notifications WHERE id = '"+ notId+"'";
         try {

@@ -13,7 +13,10 @@
 <body>
 <form method="get" action="/addRaiting?name=${playerBean.name}">
     <input type="hidden" name="name" value="${playerBean.name}">
-    <p> Name: ${playerBean.name}</p>
+    <p> Login: ${playerBean.name}</p>
+    <p> First Name: ${playerBean.firstName}</p>
+    <p> Second Name: ${playerBean.secondName}</p>
+    <p> Age: ${playerBean.age}</p>
     <p> Raiting: ${playerBean.avarageRaiting} </p>
     <select name="raitingValue">
         <option value="1">1</option>

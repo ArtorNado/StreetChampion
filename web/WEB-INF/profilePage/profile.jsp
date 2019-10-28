@@ -19,16 +19,19 @@
     <p>Age: ${userData.age}</p>aa
     <p>Raiting: ${userData.avarageRaiting }</p>
     <% Query query = new Query();
-    Boolean check = query.checkTeam((Integer) session.getAttribute("userId"));
-        if(check){
-            int teamId = query.getTeam((Integer)session.getAttribute("userId"));
+        Boolean check = query.checkTeam((Integer) session.getAttribute("userId"));
+        if (check) {
+            int teamId = query.getTeam((Integer) session.getAttribute("userId"));
             String teamName = query.getTeamName(teamId);
             out.println("<a href=\"/teaminfo?name=" + teamName + "\"> " + teamName + "</a>");
-    } else
-        out.print("<p> Dont have team </p>");
+        } else
+            out.print("<p> Dont have team </p>");
     %>
     <%--<p>Password: ${userr.password}</p>--%>
     <p><input type="submit" value="Menu"></p>
+</form>
+<form method="post" action="/logout">
+    <p><input type="submit" value="Log out"></p>
 </form>
 </body>
 </html>

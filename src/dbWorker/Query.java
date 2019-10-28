@@ -134,15 +134,13 @@ public class Query {
     }
 
     public ArrayList getAllPlayers(ArrayList players, int teamId){
-        String query = "select name from users where teamId='"+teamId+"'";
-        TeamInfoBean teamInfoBean = new TeamInfoBean();
+        /*String query = "select name from users where teamId='"+teamId+"'";*/
+        String query = "SELECT name FROM squads LEFT JOIN users USING(id) WHERE teamId = '"+teamId+"'";
         try {
             Statement statement = worker.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
-                teamInfoBean.setName(resultSet.getString("name"));
-                System.out.println(teamInfoBean.getName());
-                players.add(teamInfoBean.getName());
+                players.add(resultSet.getString("name"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -197,7 +195,7 @@ public class Query {
     }
 
     public Integer getTeam(int userId){
-        String query = "select teamId from users where id ='"+ userId +"'";
+        String query = "select teamId from squads where id ='"+ userId +"'";
         int id = 0;
         try {
             Statement statement = worker.getConnection().createStatement();
@@ -233,7 +231,7 @@ public class Query {
         }
     }
 
-    public void setTeamAdmin(String name, int teamId){
+    /*public void setTeamAdmin(String name, int teamId){
         String query = "UPDATE users SET myTeamId = '"+teamId+"' WHERE name ='"+name+"'";
         String query2 = "UPDATE users SET teamId = '"+teamId+"' WHERE name ='"+name+"'";
         try {
@@ -244,7 +242,7 @@ public class Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     public Boolean checkTeamAdmin(int userId){
         String query = "select teamId from teams where captainId ='"+ userId +"'";
@@ -261,9 +259,9 @@ public class Query {
         return answer;
     }
 
+
     public Integer getTeamAdmin(int teamId){
         String query = "select captainId from teams where teamId ='"+ teamId +"'";
-        boolean answer = false;
         int id = 0;
         try {
             Statement statement = worker.getConnection().createStatement();
@@ -278,7 +276,7 @@ public class Query {
     }
 
     public Boolean checkTeam(int userId){
-        String query = "select teamId from users where id ='"+ userId +"'";
+        String query = "select teamId from squads where id ='"+ userId +"'";
         boolean answer = false;
         try {
             Statement statement = worker.getConnection().createStatement();

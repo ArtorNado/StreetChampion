@@ -28,6 +28,10 @@
     <input type="submit" name="submit" value="My Team">
 </form>
 
+<form method="post" action="/allfreesinglematch">
+    <input type="submit" name="submit" value="Free Match">
+</form>
+
 
 </body>
 </html>

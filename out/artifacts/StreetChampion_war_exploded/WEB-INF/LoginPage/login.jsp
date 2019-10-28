@@ -23,6 +23,7 @@
 </body>
 </html>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,8 +81,13 @@
                                 <hr/>
                                 <hr/>
                             </form>
-                            <div class="text-center"><a class="small" href="register.html">Create an account</a>
-                            </div>
+                            <form action="/registration" method="post">
+                                <input class="btn btn-dark btn-block text-white btn-user" type="submit"
+                                       value="Create new account">
+                                </input>
+                            </form>
+
+
                         </div>
                     </div>
                 </div>

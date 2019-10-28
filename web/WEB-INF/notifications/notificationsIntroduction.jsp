@@ -12,7 +12,6 @@
     <title>Title</title>
 </head>
 <body>
-
 <ul>
     <c:forEach var="message" items="${message}">
         <a href="/teaminfo?name=${message}"> <c:out value="Запрос от игрока ${message} на вступление в команду"/> </a>
@@ -25,9 +24,6 @@
             <input type="submit" value="No">
         </form>
     </c:forEach>
-
-
 </ul>
-
 </body>
 </html>

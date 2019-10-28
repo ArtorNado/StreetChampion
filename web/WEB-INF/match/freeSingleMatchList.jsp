@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: One
-  Date: 04.10.2019
-  Time: 22:39
+  Date: 25.10.2019
+  Time: 22:34
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,6 +13,16 @@
     <title>Title</title>
 </head>
 <body>
-<tag:allTeamsTag></tag:allTeamsTag>
+<table>
+    <tr>
+        <th>id</th>
+        <th>Info</th>
+        <th>Players</th>
+<%--
+        <th>Data and time</th>
+--%>
+    </tr>
+    <tag:freeSingleMatchTag></tag:freeSingleMatchTag>
+</table>
 </body>
 </html>

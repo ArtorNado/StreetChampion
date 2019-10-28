@@ -7,18 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<ul>
-    <c:forEach var="teams" items="${teams}">
-        <li>
-            <a href="/teaminfo?name=${teams}">  <c:out value="${teams}" />  </a>
-        </li>
-    </c:forEach>
-
-</ul>
+<tag:allTeamsTag></tag:allTeamsTag>
 </body>
 </html>

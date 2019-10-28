@@ -32,6 +32,6 @@ public class CreateTeamServlet extends HttpServlet {
         String userName = (String) session.getAttribute("userName");
         String nameOfNewTeam = request.getParameter("nameOfNewTeam");
         query.createNewTeam(nameOfNewTeam, userId);
-        query.setTeamAdmin(userName, query.getTeamId(nameOfNewTeam));
+        /*query.setTeamAdmin(userName, query.getTeamId(nameOfNewTeam));*/
     }
 }

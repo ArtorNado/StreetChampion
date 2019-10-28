@@ -14,7 +14,6 @@ public class NotificationsQuery {
 
     public ArrayList getNotificationsId(int recipient){
         String query = "select id from notifications where idRecipient ='"+ recipient +"'";
-        NotificationBean notificationBean = new NotificationBean();
         ArrayList idList = new ArrayList();
         try {
             Statement statement = worker.getConnection().createStatement();

@@ -26,12 +26,11 @@ public class CreateTeamServlet extends HttpServlet {
                     .getRequestDispatcher("/WEB-INF/teams/createTeam.jsp")
                     .forward(request, response);
         }
-        Query query = new Query();
+        CreateTeamDAO dao = new CreateTeamDAO();
         HttpSession session = request.getSession();
         int userId = (Integer) session.getAttribute("userId");
-        String userName = (String) session.getAttribute("userName");
+        System.out.println("userId for cnt - " + userId);
         String nameOfNewTeam = request.getParameter("nameOfNewTeam");
-        query.createNewTeam(nameOfNewTeam, userId);
-        /*query.setTeamAdmin(userName, query.getTeamId(nameOfNewTeam));*/
+        dao.createTeam(userId, nameOfNewTeam);
     }
 }

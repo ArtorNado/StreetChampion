@@ -97,6 +97,21 @@ public class MatchQuery {
         return curPlayers;
     }
 
+    public Integer getMatchId(int createrId){
+        String query = "select id_fr_match_single from friendly_match_single WHERE createrId = '"+createrId+"'";
+        int matchId = 0;
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                matchId = resultSet.getInt("id_fr_match_single");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return matchId;
+    }
+
     public void addPlayer(int idMatch, int idPlayer){
         String query = "INSERT INTO matchsquad(id_fr_match_single,id) VALUES ('"+idMatch+"','"+idPlayer+"')";
         try {
@@ -118,6 +133,18 @@ public class MatchQuery {
             e.printStackTrace();
         }
     }
+
+    public void createMatch(int curPlayers, String info, int createrId){
+        String query = "INSERT INTO friendly_match_single(curPlayers,freePlaces, info, createrId) VALUES ('"+curPlayers+"', '"+curPlayers+"','"+info+"','"+createrId+"')";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 

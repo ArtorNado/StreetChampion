@@ -6,44 +6,33 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16e9653d-5a2c-4eb9-bce2-3f8fce15cd04" name="Default Changelist" comment="upgrade profile">
-      <change afterPath="$PROJECT_DIR$/src/LogOutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dbWorker/matchQuery/MatchQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matchs/MatchBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matchs/singleMatch/AllFreeSingleMatchsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matchs/singleMatch/AllFreeSingleMatchsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matchs/singleMatch/PlayerListDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matchs/singleMatch/PlayerListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matchs/singleMatch/SubscribeSingleMatchDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/matchs/singleMatch/SubscribeSingleMatchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/match/freeSingleMatchList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/match/playersList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/tags/allTeamsTag.tag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/tags/freeSingleMatchTag.tag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/tags/playerList.tag" afterDir="false" />
+    <list default="true" id="16e9653d-5a2c-4eb9-bce2-3f8fce15cd04" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CheckSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/matchs/MatchsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/matchs/createMatch/CreateMatchDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/matchs/createMatch/CreateMatchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/teams/createTeam/CreateTeamDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/match/createMatch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/match/matchMenu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/match/myCreatedMatch.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a0adc9c2-0a46-4500-b6b1-c6b721cca8ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a0adc9c2-0a46-4500-b6b1-c6b721cca8ee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/LoginPage/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/LoginPage/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/CheckUserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/LoginPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/LoginPageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/ProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/ProfileServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/dbWorker/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/dbWorker/Query.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/teams/createTeam/CreateTeamServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/classes/teams/createTeam/CreateTeamServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/mainMenu/mainMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/mainMenu/mainMenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/profilePage/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/profilePage/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/teams/allTeams.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/teams/allTeams.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StreetChampion_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/CheckUserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/LoginPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StreetChampion/LoginPageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/ProfileServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StreetChampion/ProfileServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/dbWorker/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StreetChampion/dbWorker/Query.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/StreetChampion/teams/createTeam/CreateTeamServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StreetChampion/teams/createTeam/CreateTeamServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CheckUserData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfileServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbWorker/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbWorker/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbWorker/notificationsQuery/NotificationsQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbWorker/notificationsQuery/NotificationsQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbWorker/matchQuery/MatchQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbWorker/matchQuery/MatchQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/teams/createTeam/CreateTeamServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/teams/createTeam/CreateTeamServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/LoginPage/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/LoginPage/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/mainMenu/mainMenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/mainMenu/mainMenu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/notifications/notificationsIntroduction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/notifications/notificationsIntroduction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/profilePage/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/profilePage/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/registration/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/registration/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/teams/allTeams.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/teams/allTeams.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -99,6 +88,13 @@
         <item name="streetchampions@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="streetchampions: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="squads: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="streetchampions@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="streetchampions: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="users: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -118,7 +114,7 @@
     <session id="142587293">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.109" value="1" />
@@ -138,6 +134,7 @@
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.75" value="1" />
+          <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.81" value="1" />
           <entry key="project.open.time.83" value="1" />
@@ -146,28 +143,29 @@
           <entry key="project.open.time.90" value="2" />
           <entry key="project.open.time.91" value="1" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.open.time.97" value="1" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Database Element" value="24" />
-          <entry key="JAVA" value="314" />
-          <entry key="JSP" value="197" />
+          <entry key="JAVA" value="347" />
+          <entry key="JSP" value="207" />
           <entry key="SQL" value="3" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="25" />
+          <entry key="XML" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16943" />
-          <entry key="JSP" value="4406" />
-          <entry key="PLAIN_TEXT" value="125" />
+          <entry key="JAVA" value="18271" />
+          <entry key="JSP" value="4469" />
+          <entry key="PLAIN_TEXT" value="149" />
           <entry key="SQL" value="95" />
           <entry key="Scratch" value="6" />
-          <entry key="XML" value="764" />
+          <entry key="XML" value="790" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -181,13 +179,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dbWorker/matchQuery/MatchQuery.java">
+        <entry file="file://$PROJECT_DIR$/src/LogOutServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+            <state relative-caret-position="69">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProfileServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-329">
+              <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LoginPageServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/teams/createTeam/CreateTeamServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CheckSession.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dbWorker/Query.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-46">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -198,12 +250,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>get</find>
+    </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
@@ -225,23 +280,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/notifications/NotificationsHandler.java" />
-        <option value="$PROJECT_DIR$/src/notifications/TrueAnswerServlet.java" />
-        <option value="$PROJECT_DIR$/src/notifications/DeleteNotifications.java" />
-        <option value="$PROJECT_DIR$/src/Cookies.java" />
-        <option value="$PROJECT_DIR$/src/logInBean/LogInBean.java" />
-        <option value="$PROJECT_DIR$/src/teams/AllTeamsServlet.java" />
-        <option value="$PROJECT_DIR$/src/teams/FreeTeamsServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/teams/freeTeams.jsp" />
         <option value="$PROJECT_DIR$/web/teamInfo.jsp" />
         <option value="$PROJECT_DIR$/src/teams/EnterTeam/EnterTeamServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/teams/createTeam.jsp" />
         <option value="$PROJECT_DIR$/src/registration/RegistrationServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/players/playerInfo.jsp" />
         <option value="$PROJECT_DIR$/src/players/PlayerInfoServlet.java" />
-        <option value="$PROJECT_DIR$/src/LoginPageServlet.java" />
         <option value="$PROJECT_DIR$/src/players/PlayerBean.java" />
-        <option value="$PROJECT_DIR$/src/ProfileServlet.java" />
         <option value="$PROJECT_DIR$/src/teams/myTeam/myTeamMenuServlet.java" />
         <option value="$PROJECT_DIR$/src/teams/myTeam/myTeamSquadServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/teams/myTeamMenu/myTeamMenuAdmin.jsp" />
@@ -258,14 +303,10 @@
         <option value="$PROJECT_DIR$/web/tld/allTeamsTag.tld" />
         <option value="$PROJECT_DIR$/web/tld/allTeamsTag.tag" />
         <option value="$PROJECT_DIR$/web/WEB-INF/teams/allTeams.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/mainMenu/mainMenu.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/tags/allTeamsTag.tag" />
         <option value="$PROJECT_DIR$/src/matchs/singleMatch/SubscribeSingleMatchServlet.java" />
         <option value="$PROJECT_DIR$/src/notifications/NotificationsIntroductionServlet.java" />
-        <option value="$PROJECT_DIR$/src/teams/createTeam/CreateTeamServlet.java" />
-        <option value="$PROJECT_DIR$/src/dbWorker/Query.java" />
         <option value="$PROJECT_DIR$/src/matchs/singleMatch/SubscribeSingleMatchDAO.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/matchs/MatchBean.java" />
         <option value="$PROJECT_DIR$/src/matchs/singleMatch/AllFreeSingleMatchsServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/tags/freeSingleMatchTag.tag" />
@@ -275,7 +316,21 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/match/playersList.jsp" />
         <option value="$PROJECT_DIR$/src/matchs/singleMatch/PlayerListServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/tags/playerList.tag" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/mainMenu/mainMenu.jsp" />
+        <option value="$PROJECT_DIR$/src/matchs/MatchsServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/match/createMatch.jsp" />
+        <option value="$PROJECT_DIR$/src/matchs/createMatch/CreateMatchServlet.java" />
+        <option value="$PROJECT_DIR$/src/teams/createTeam/CreateTeamDAO.java" />
         <option value="$PROJECT_DIR$/src/dbWorker/matchQuery/MatchQuery.java" />
+        <option value="$PROJECT_DIR$/src/dbWorker/Query.java" />
+        <option value="$PROJECT_DIR$/src/matchs/createMatch/CreateMatchDAO.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/match/myCreatedMatch.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/match/matchMenu.jsp" />
+        <option value="$PROJECT_DIR$/src/teams/createTeam/CreateTeamServlet.java" />
+        <option value="$PROJECT_DIR$/src/CheckSession.java" />
+        <option value="$PROJECT_DIR$/src/LoginPageServlet.java" />
+        <option value="$PROJECT_DIR$/src/ProfileServlet.java" />
       </list>
     </option>
   </component>
@@ -304,6 +359,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,27 +383,14 @@
               <item name="StreetChampion" type="b2602c69:ProjectViewProjectNode" />
               <item name="StreetChampion" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dbWorker" type="462c0819:PsiDirectoryNode" />
-              <item name="matchQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="teams" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StreetChampion" type="b2602c69:ProjectViewProjectNode" />
               <item name="StreetChampion" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="matchs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StreetChampion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StreetChampion" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="matchs" type="462c0819:PsiDirectoryNode" />
-              <item name="singleMatch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StreetChampion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StreetChampion" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="players" type="462c0819:PsiDirectoryNode" />
+              <item name="teams" type="462c0819:PsiDirectoryNode" />
+              <item name="createTeam" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StreetChampion" type="b2602c69:ProjectViewProjectNode" />
@@ -364,7 +408,7 @@
               <item name="StreetChampion" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="match" type="462c0819:PsiDirectoryNode" />
+              <item name="LoginPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StreetChampion" type="b2602c69:ProjectViewProjectNode" />
@@ -373,12 +417,17 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="tags" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="StreetChampion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StreetChampion" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="teams" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,7 +438,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572268499808" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572476816315" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../webtest" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -742,7 +791,9 @@
       <workItem from="1571900040408" duration="2664000" />
       <workItem from="1572027610391" duration="6822000" />
       <workItem from="1572084800945" duration="9558000" />
-      <workItem from="1572243791929" duration="12602000" />
+      <workItem from="1572243791929" duration="15015000" />
+      <workItem from="1572444708731" duration="607000" />
+      <workItem from="1572463010724" duration="9356000" />
     </task>
     <task id="LOCAL-00001" summary="add Raiting System">
       <created>1571496873731</created>
@@ -779,11 +830,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571864583417</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add match system">
+      <created>1572268577909</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572268577909</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178704000" />
+    <option name="totallyTimeSpent" value="191080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,17 +856,17 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46774194" visible="true" weight="0.2147651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4684564" visible="true" weight="0.22080536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.5322581" side_tool="true" weight="0.2147651" />
+      <window_info id="Web" order="7" sideWeight="0.5315436" side_tool="true" weight="0.2147651" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3342282" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3342282" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -845,7 +903,8 @@
     <MESSAGE value="add Cookies" />
     <MESSAGE value="add registration" />
     <MESSAGE value="upgrade profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="upgrade profile" />
+    <MESSAGE value="add match system" />
+    <option name="LAST_COMMIT_MESSAGE" value="add match system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -862,98 +921,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/teams/myTeamMenu/myTeamMenu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CheckUserData.java" />
-    <entry file="file://$PROJECT_DIR$/src/ProfileServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="62" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LogOutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/LoginPage/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="99" column="7" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/teams/myTeamMenu/myTeamMenuAdmin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/registration/RegistrationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/players/UpdateRaiting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/players/AddRaitingServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/notifications/notificationsIntroduction.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/registration/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/players/playerInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/notifications/notificationsMenu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/profilePage/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -968,13 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/teams/freeTeams.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/teams/FreeTeamsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -983,20 +943,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/tld/allTeamsTag.tld" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/teams/createTeam.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/mainMenu/mainMenu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/teams/allTeams.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -1008,13 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginPageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1053,24 +992,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/teams/AllTeamsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/players/AllPlayersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/teams/createTeam/CreateTeamServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="51" lean-forward="true" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1081,20 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/teams/teamInfo/TeamInfoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/matchs/singleMatch/SubscribeSingleMatchServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,9 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1112,23 +1024,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbWorker/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="133" column="5" lean-forward="true" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matchs/singleMatch/AllFreeSingleMatchsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1143,9 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1156,31 +1048,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matchs/singleMatch/AllFreeSingleMatchsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/match/freeSingleMatchList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/tags/playerList.tag">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/tags/freeSingleMatchTag.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1198,33 +1069,215 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="189" column="22" lean-forward="true" selection-start-line="189" selection-start-column="22" selection-end-line="189" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/matchs/MatchBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/mainMenu/mainMenu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matchs/MatchsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/teams/createTeam.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/teams/AllTeamsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/match/createMatch.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/teams/teamInfo/TeamInfoServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/teams/teamInfo/TeamInfoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/addOrDeleteUser/AddUserInTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/teams/createTeam/CreateTeamDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/teams/freeTeams.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/match/freeSingleMatchList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matchs/singleMatch/AllFreeSingleMatchsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matchs/singleMatch/AllFreeSingleMatchsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dbWorker/matchQuery/MatchQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+        <state relative-caret-position="-103">
+          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/match/myCreatedMatch.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/match/matchMenu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matchs/createMatch/CreateMatchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matchs/createMatch/CreateMatchDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/tags/freeSingleMatchTag.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cookies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbWorker/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CheckSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/LoginPage/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginPageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/teams/createTeam/CreateTeamServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProfileServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LogOutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>

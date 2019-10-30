@@ -189,5 +189,23 @@
         <url-pattern>/playerlist</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>MatchsServlet</servlet-name>
+        <servlet-class>matchs.MatchsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MatchsServlet</servlet-name>
+        <url-pattern>/matchs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateMatchServlet</servlet-name>
+        <servlet-class>matchs.createMatch.CreateMatchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateMatchServlet</servlet-name>
+        <url-pattern>/creatematch</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

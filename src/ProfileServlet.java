@@ -31,7 +31,6 @@ public class ProfileServlet extends HttpServlet {
         if (value != null) {
             if (value[0].equals("on")) {
                 cookies.createCookies(request, response, login, password);
-
             }
         }
         LogInBean logInBean = new LogInBean(login, password);
@@ -48,6 +47,7 @@ public class ProfileServlet extends HttpServlet {
              check = -1;
         }
         session.setAttribute("userId", userId);
+        session.setAttribute("userPassword", userPassword);
         session.setAttribute("userName", login);
         if ((login != null) && (query.searchUser(login)) && ((password.equals(userPassword)))) {
             request.setAttribute("teamId", teamId);

@@ -28,8 +28,8 @@
     <input type="submit" name="submit" value="My Team">
 </form>
 
-<form method="post" action="/allfreesinglematch">
-    <input type="submit" name="submit" value="Free Match">
+<form method="post" action="/matchs">
+    <input type="submit" name="submit" value="Matchs">
 </form>
 
 

@@ -207,5 +207,32 @@
         <url-pattern>/creatematch</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>FinishMatchServlet</servlet-name>
+        <servlet-class>matchs.finishMatch.FinishMatchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FinishMatchServlet</servlet-name>
+        <url-pattern>/finishmatch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateTourmamentServlet</servlet-name>
+        <servlet-class>tourmaments.createTourmament.CreateTourmamentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateTourmamentServlet</servlet-name>
+        <url-pattern>/createtourmament</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourmamentsServlet</servlet-name>
+        <servlet-class>tourmaments.TourmamentsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourmamentsServlet</servlet-name>
+        <url-pattern>/tourmaments</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

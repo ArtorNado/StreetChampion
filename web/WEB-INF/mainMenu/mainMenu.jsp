@@ -32,6 +32,10 @@
     <input type="submit" name="submit" value="Matchs">
 </form>
 
+<form method="post" action="/tourmaments">
+    <input type="submit" name="submit" value="Tourmaments">
+</form>
+
 
 </body>
 </html>

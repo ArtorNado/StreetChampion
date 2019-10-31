@@ -15,7 +15,7 @@
 <form method="post" action="/menu">
     <p>Login: ${userr.name}</p>
     <p>First Name: ${userData.firstName}</p>
-    <p>Secon Name: ${userData.secondName}</p>
+    <p>Second Name: ${userData.secondName}</p>
     <p>Age: ${userData.age}</p>aa
     <p>Raiting: ${userData.avarageRaiting }</p>
     <% Query query = new Query();

@@ -164,5 +164,63 @@ public class MatchQuery {
         return answer;
     }
 
+    public Boolean checkCreratedMatch(int userId){
+        String query = "select id_fr_match_single from friendly_match_single where createrId ='"+ userId +"'";
+        boolean answer = false;
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                answer = true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return answer;
+    }
+    public ArrayList<MatchBean> getAllCreatedMatch(int createrId){
+        String queryId = "select id_fr_match_single from friendly_match_single WHERE createrId = '"+createrId+"'";
+        String queryCurP = "select curPlayers from friendly_match_single WHERE createrId = '"+createrId+"'";
+        String queryFreeP = "select freePlaces from friendly_match_single WHERE createrId = '"+createrId+"'";
+        String queryInfo = "select info from friendly_match_single WHERE createrId = '"+createrId+"'";
+        String queryData = "select data from friendly_match_single WHERE createrId = '"+createrId+"'";
+        ArrayList<MatchBean> mbArray = new ArrayList<>();
+        try {
+            Statement statementId = worker.getConnection().createStatement();
+            Statement statementCurP = worker.getConnection().createStatement();
+            Statement statementFreeP = worker.getConnection().createStatement();
+            Statement statementInfo = worker.getConnection().createStatement();
+            Statement statementData = worker.getConnection().createStatement();
+            ResultSet resultSetId = statementId.executeQuery(queryId);
+            ResultSet resultSetCurP = statementCurP.executeQuery(queryCurP);
+            ResultSet resultSetFreeP = statementFreeP.executeQuery(queryFreeP);
+            ResultSet resultSetInfo = statementInfo.executeQuery(queryInfo);
+            ResultSet resultSetData = statementData.executeQuery(queryData);
+            while (resultSetId.next() && resultSetCurP.next() && resultSetFreeP.next() && resultSetInfo.next() && resultSetData.next()){
+                MatchBean matchBean = new MatchBean();
+                matchBean.setCurPlayers(resultSetCurP.getInt("curPlayers"));
+                matchBean.setFreePlaces(resultSetFreeP.getInt("freePlaces"));
+                matchBean.setPlayers(resultSetCurP.getInt("curPlayers")-resultSetFreeP.getInt("freePlaces"));
+                matchBean.setId(resultSetId.getInt("id_fr_match_single"));
+                matchBean.setInfo(resultSetInfo.getString("info"));
+                /*matchBean.setData(resultSetData.getDate("data").toString());*/
+                mbArray.add(matchBean);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return mbArray;
+    }
 
+    public void finishMatch(int matchId){
+        String query = "DELETE FROM friendly_match_single WHERE id_fr_match_single = '"+matchId+"'";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

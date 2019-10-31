@@ -17,8 +17,11 @@
 <form method="post" action="/creatematch">
     <input type="submit" name="submit" value="Create Match">
 </form>
-<form method="post" action="/creatematch">
-    <input type="submit" name="submit" value="Create Match">
+<form method="post" action="/finishmatch">
+    <input type="submit" name="submit" value="My Created Match">
+</form>
+<form method="post" action="/finishmatch">
+    <input type="submit" name="submit" value="My Created Match">
 </form>
 </body>
 </html>

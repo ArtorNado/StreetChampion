@@ -178,6 +178,7 @@ public class MatchQuery {
         }
         return answer;
     }
+
     public ArrayList<MatchBean> getAllCreatedMatch(int createrId){
         String queryId = "select id_fr_match_single from friendly_match_single WHERE createrId = '"+createrId+"'";
         String queryCurP = "select curPlayers from friendly_match_single WHERE createrId = '"+createrId+"'";

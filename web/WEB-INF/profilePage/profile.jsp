@@ -7,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <html>
 <head>
     <title>Title</title>
@@ -18,15 +19,7 @@
     <p>Second Name: ${userData.secondName}</p>
     <p>Age: ${userData.age}</p>aa
     <p>Raiting: ${userData.avarageRaiting }</p>
-    <% Query query = new Query();
-        Boolean check = query.checkTeam((Integer) session.getAttribute("userId"));
-        if (check) {
-            int teamId = query.getTeam((Integer) session.getAttribute("userId"));
-            String teamName = query.getTeamName(teamId);
-            out.println("<a href=\"/teaminfo?name=" + teamName + "\"> " + teamName + "</a>");
-        } else
-            out.print("<p> Dont have team </p>");
-    %>
+    <tag:profile></tag:profile>
     <%--<p>Password: ${userr.password}</p>--%>
     <p><input type="submit" value="Menu"></p>
 </form>

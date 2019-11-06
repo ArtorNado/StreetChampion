@@ -36,6 +36,13 @@
     <input type="submit" name="submit" value="Tourmaments">
 </form>
 
+<form method="post" action="/editdata">
+    <p><input type="submit" value="Edit Data"></p>
+</form>
+
+<form method="post" action="/profile">
+    <p><input type="submit" value="Profile"></p>
+</form>
 
 </body>
 </html>

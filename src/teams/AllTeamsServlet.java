@@ -14,9 +14,9 @@ import java.util.ArrayList;
 @WebServlet(name = "AllTeamsServlet")
 public class AllTeamsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Query query = new Query();
+        AllTeamsDAO dao = new AllTeamsDAO();
         ArrayList teams = new ArrayList();
-        teams = query.getAllTeam(teams);
+        teams = dao.getAllTeams(teams);
         request.setAttribute("teams", teams);
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/teams/allTeams.jsp")

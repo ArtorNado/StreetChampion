@@ -16,7 +16,30 @@ import java.io.PrintWriter;
 @WebServlet(name = "ProfileServlet")
 public class ProfileServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
         Query query = new Query();
+        System.out.println(session.getAttribute("userId") + " id");
+        if(session.getAttribute("userId") != null){
+            LogInBean logInBean = new LogInBean((String) session.getAttribute("userName"), (String) session.getAttribute("userPassword"));
+            ProfileDAO dao = new ProfileDAO((String) session.getAttribute("userName"), (Integer) session.getAttribute("userId"));
+            int age = dao.getUserAge();
+            String firstName = dao.getFirstName();
+            String secondName = dao.getSecondName();
+            double avarageRaiting = dao.getAvarageRaiting();
+            int teamId = dao.getTeamId();
+            PlayerBean playerBean = new PlayerBean(firstName, secondName, age, avarageRaiting);
+            int check = 1;
+            if( query.checkTeam((Integer)session.getAttribute("userId")) == null) {
+                check = -1;
+            }
+            request.setAttribute("teamId", teamId);
+            request.setAttribute("check", check);
+            request.setAttribute("userr", logInBean);
+            request.setAttribute("userData", playerBean);
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/profilePage/profile.jsp")
+                    .forward(request, response);
+        }
         Cookies cookies = new Cookies();
         if ((request.getParameter("login").isEmpty()) || (request.getParameter("password")).isEmpty()) {
             getServletContext()
@@ -34,14 +57,13 @@ public class ProfileServlet extends HttpServlet {
             }
         }
         LogInBean logInBean = new LogInBean(login, password);
-        int age = query.getUserAge(login);
-        String firstName = query.getUserFirstName(login);
-        String secondName = query.getUserSecondName(login);
-        double avarageRaiting = query.getUserAvarageRaiting(login);
-        int teamId = query.getTeam(userId);
-        System.out.println("teamdId" + teamId);
+        ProfileDAO dao = new ProfileDAO(login, userId);
+        int age = dao.getUserAge();
+        String firstName = dao.getFirstName();
+        String secondName = dao.getSecondName();
+        double avarageRaiting = dao.getAvarageRaiting();
+        int teamId = dao.getTeamId();
         PlayerBean playerBean = new PlayerBean(firstName, secondName, age, avarageRaiting);
-        HttpSession session = request.getSession();
         int check = 1;
         if( query.checkTeam(userId) == null) {
              check = -1;
@@ -65,6 +87,11 @@ public class ProfileServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
     }
 }

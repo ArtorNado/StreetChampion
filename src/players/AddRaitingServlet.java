@@ -18,15 +18,14 @@ public class AddRaitingServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Query query = new Query();
+        AddRaitingDAO dao = new AddRaitingDAO();
         String name = request.getParameter("name");
         int rait = Integer.parseInt(request.getParameter("raitingValue"));
         UpdateRaiting updateRaiting = new UpdateRaiting();
         updateRaiting.updateRaiting(name, rait);
-        int raiting = query.getUserRaiting(name);
-        int curVoice = query.getUserCurVoice(name);
-        double avarageRaiting = query.getUserAvarageRaiting(name);
-        System.out.println(avarageRaiting);
+        int raiting = dao.getuserRaiting(name);
+        int curVoice = dao.getCurVoice(name);
+        double avarageRaiting = dao.getAvarageRaiting(name);
         PlayerBean playerBean = new PlayerBean(name, raiting, curVoice, avarageRaiting);
         request.setAttribute("playerBean", playerBean);
         getServletContext()

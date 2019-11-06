@@ -20,16 +20,19 @@ public class CreateTeamServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
         if(request.getParameter("nameOfNewTeam").isEmpty()){
-            System.out.println("null");
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/teams/createTeam.jsp")
                     .forward(request, response);
         }
         CreateTeamDAO dao = new CreateTeamDAO();
-        HttpSession session = request.getSession();
         int userId = (Integer) session.getAttribute("userId");
-        System.out.println("userId for cnt - " + userId);
         String nameOfNewTeam = request.getParameter("nameOfNewTeam");
         dao.createTeam(userId, nameOfNewTeam);
     }

@@ -18,11 +18,10 @@ public class AllPlayersServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Query query = new Query();
+        AddPlayersDAO dao = new AddPlayersDAO();
         int id = Integer.parseInt(request.getParameter("name"));
         ArrayList players = new ArrayList();
-        players = query.getAllPlayers(players, id);
-        System.out.println(players);
+        players = dao.getAllPlayers(players, id);
         request.setAttribute("players", players);
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/players/allPlayers.jsp")

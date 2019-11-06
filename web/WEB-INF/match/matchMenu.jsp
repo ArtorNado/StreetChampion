@@ -20,8 +20,5 @@
 <form method="post" action="/finishmatch">
     <input type="submit" name="submit" value="My Created Match">
 </form>
-<form method="post" action="/finishmatch">
-    <input type="submit" name="submit" value="My Created Match">
-</form>
 </body>
 </html>

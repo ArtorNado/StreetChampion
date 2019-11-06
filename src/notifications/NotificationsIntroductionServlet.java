@@ -18,15 +18,14 @@ import java.util.ArrayList;
 public class NotificationsIntroductionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        NotificationsQuery nQuery = new NotificationsQuery();
-        Query query = new Query();
+        NotificationsIntroductionDAO dao = new NotificationsIntroductionDAO();
         ArrayList idList = new ArrayList();
         int captainId = (Integer) session.getAttribute("userId");
-        int teamId = query.getTeamId(captainId);
-        idList = nQuery.getIdNotificationType1((Integer)session.getAttribute("userId"));
+        int teamId = dao.getTeamId(captainId);
+        idList = dao.getNotificType1(idList, (Integer)session.getAttribute("userId"));
         ArrayList<String> message = new ArrayList();
         for (int i = 0; i < idList.size(); i++) {
-            message.add((nQuery.getSendertId((Integer)idList.get(i))).toString());
+            message.add((dao.getSenderId((Integer)idList.get(i))).toString());
         }
         request.setAttribute("notificationsId", idList);
         request.setAttribute("message", message);
@@ -38,6 +37,11 @@ public class NotificationsIntroductionServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
     }
 }

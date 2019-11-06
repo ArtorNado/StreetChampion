@@ -16,9 +16,9 @@ public class TeamInfoServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Query query = new Query();
         String nameOfTeam = request.getParameter("name");
-        int id = query.getTeamId(nameOfTeam);
+        TeamInfoDAO dao = new TeamInfoDAO(nameOfTeam);
+        int id = dao.getTeamId();
         TeamInfoBean teamInfoBean = new TeamInfoBean(nameOfTeam,id);
         request.setAttribute("team", teamInfoBean);
         getServletContext()

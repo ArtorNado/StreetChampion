@@ -17,8 +17,13 @@ public class CreateMatchServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        CreateMatchDAO createMatchDAO = new CreateMatchDAO();
         HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
+        CreateMatchDAO createMatchDAO = new CreateMatchDAO();
         String description = request.getParameter("description");
         int curPlayers = Integer.parseInt(request.getParameter("curPlayers"));
         int createrId =(Integer) session.getAttribute("userId");

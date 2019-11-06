@@ -418,4 +418,26 @@ public class Query {
         return age;
     }
 
+    public void editData(String firstName, String secondName, int age){
+        String query = "UPDATE users SET firstName = '"+firstName+"'";
+        String query1 = "UPDATE users SET secondName = '"+secondName+"'";
+        String query2 = "UPDATE users SET age = '"+age+"'";
+        try {
+            Statement statement = worker.getConnection().createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+            statement.close();
+            Statement statement1 = worker.getConnection().createStatement();
+            statement1.addBatch(query1);
+            statement1.executeBatch();
+            statement1.close();
+            Statement statement2 = worker.getConnection().createStatement();
+            statement2.addBatch(query2);
+            statement2.executeBatch();
+            statement2.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

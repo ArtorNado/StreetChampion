@@ -10,20 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(name = "myTeamMenuServlet")
-public class myTeamMenuServlet extends HttpServlet {
+@WebServlet(name = "MyTeamMenuServlet")
+public class MyTeamMenuServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        Query query = new Query();
         int id = (Integer) session.getAttribute("userId");
-        int teamId = query.getTeam(id);
+        MyTeamMenuDAO dao = new MyTeamMenuDAO(id);
+        int teamId = dao.getTeamId();
         TeamInfoBean teamInfoBean = new TeamInfoBean();
         teamInfoBean.setId(teamId);
         request.setAttribute("teamInfoBean", teamInfoBean);
         request.setAttribute("teamId", teamId);
-        if (query.checkTeamAdmin(id)) {
+        if (dao.checkTeamAdmin()) {
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/teams/myTeamMenu/myTeamMenuAdmin.jsp")
                     .forward(request, response);
@@ -35,6 +34,11 @@ public class myTeamMenuServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
     }
 }

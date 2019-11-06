@@ -20,8 +20,17 @@ public class FinishMatchServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
         int matchId = Integer.parseInt(request.getParameter("id"));
         FinishMatchDAO dao = new FinishMatchDAO();
         dao.finishMatch(matchId);
+        getServletContext()
+                .getRequestDispatcher("/WEB-INF/match/matchMenu.jsp")
+                .forward(request, response);
     }
 }

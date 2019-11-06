@@ -22,21 +22,24 @@ public class EnterTeamServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        Query query = new Query();
-        NotificationsQuery nQuery = new NotificationsQuery();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
         int userId = (Integer) session.getAttribute("userId");
         int teamId = Integer.parseInt(request.getParameter("name"));
-        int captainId = query.getTeamAdmin(teamId);
-        String teamName = query.getTeamName(teamId);
+        EnterTeamDAO dao = new EnterTeamDAO(userId, teamId);
+        int captainId = dao.getTeamAdmin();
+        String teamName = dao.getTeamName();
         TeamInfoBean teamInfoBean = new TeamInfoBean(teamName,teamId);
         request.setAttribute("team", teamInfoBean);
-        if(query.checkTeam(userId)){
-            System.out.println("true");
+        if(dao.checkTeam()){
             getServletContext()
                     .getRequestDispatcher("/teamInfo.jsp")
                     .forward(request, response);
         } else{
-            nQuery.createNotificationType1(captainId,userId);
+            dao.createNotificationType1(captainId, userId);
         }
     }
 }

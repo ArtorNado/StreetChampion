@@ -17,8 +17,13 @@ public class CreateTourmamentServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        CreateTourmamentDAO dao = new CreateTourmamentDAO();
         HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
+        CreateTourmamentDAO dao = new CreateTourmamentDAO();
         String description = request.getParameter("description");
         String name = request.getParameter("name");
         int maxTeams = Integer.parseInt(request.getParameter("maxTeams"));

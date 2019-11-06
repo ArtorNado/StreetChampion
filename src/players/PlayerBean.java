@@ -42,7 +42,12 @@ public class PlayerBean implements Serializable {
         this.secondName = secondName;
         this.age = age;
         this.avarageRaiting = avarageRaiting;
-        this.teamName = teamName;
+    }
+
+    public PlayerBean(String firstName, String secondName, int age){
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.age = age;
     }
 
     public String getTeamName() {

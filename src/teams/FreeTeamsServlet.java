@@ -15,9 +15,9 @@ import java.util.List;
 @WebServlet(name = "FreeTeamsServlet")
 public class FreeTeamsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Query query = new Query();
+        FreeTeamsDAO dao = new FreeTeamsDAO();
         ArrayList freeTeams = new ArrayList();
-        freeTeams = query.getFreeTeam(freeTeams);
+        freeTeams = dao.getAllFreeTeams(freeTeams);
         request.setAttribute("freeTeams", freeTeams);
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/teams/freeTeams.jsp")

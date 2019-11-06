@@ -17,12 +17,12 @@ public class PlayerInfoServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Query query = new Query();
         String login = request.getParameter("name");
-        int age = query.getUserAge(login);
-        String firstName = query.getUserFirstName(login);
-        String secondName = query.getUserSecondName(login);
-        double avarageRaiting = query.getUserAvarageRaiting(login);
+        PlayerInfoDAO dao = new PlayerInfoDAO();
+        int age = dao.getAge(login);
+        String firstName = dao.getFirstName(login);
+        String secondName = dao.getSecondName(login);
+        double avarageRaiting = dao.getAvarageRaiting(login);
         PlayerBean playerBean = new PlayerBean(login, firstName, secondName, age, avarageRaiting);
         request.setAttribute("playerBean", playerBean);
         getServletContext()

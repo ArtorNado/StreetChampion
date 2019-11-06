@@ -15,8 +15,13 @@ public class SubscribeSingleMatchServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SubscribeSingleMatchDAO dao = new SubscribeSingleMatchDAO();
         HttpSession session = request.getSession();
+        if(session.getAttribute("userId") == null){
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
+                    .forward(request, response);
+        }
+        SubscribeSingleMatchDAO dao = new SubscribeSingleMatchDAO();
         int matchId = Integer.parseInt(request.getParameter("id"));
         int userId = (Integer) session.getAttribute("userId");
         Boolean answer = dao.addUser(matchId, userId);

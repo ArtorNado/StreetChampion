@@ -19,18 +19,18 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Query query = new Query();
+        RegistrationDAO dao = new RegistrationDAO();
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         String firstName = request.getParameter("firstName");
         String secondName = request.getParameter("secondName");
-        if (login.isEmpty() || password.isEmpty() || query.searchUser(login)  || firstName.isEmpty() || secondName.isEmpty() || request.getParameter("age") == null) {
+        if (login.isEmpty() || password.isEmpty() || dao.searchUser(login)  || firstName.isEmpty() || secondName.isEmpty() || request.getParameter("age") == null) {
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/registration/registration.jsp")
                     .forward(request, response);
         } else {
             int age = Integer.parseInt(request.getParameter("age"));
-            query.createNewUser(login, password, firstName, secondName, age);
+            dao.createNewUser(login, password, firstName, secondName, age);
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
                     .forward(request, response);

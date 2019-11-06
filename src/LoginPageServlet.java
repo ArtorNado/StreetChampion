@@ -25,10 +25,6 @@ public class LoginPageServlet extends javax.servlet.http.HttpServlet {
         }
         LogInBean logInBean = new LogInBean(login,password);
         request.setAttribute("cookies", logInBean);
-
-
-        response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")
                 .forward(request, response);

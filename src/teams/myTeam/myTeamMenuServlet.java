@@ -1,6 +1,7 @@
 package teams.myTeam;
 
 import dbWorker.Query;
+import teams.teamInfo.TeamInfoBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +18,11 @@ public class myTeamMenuServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Query query = new Query();
         int id = (Integer) session.getAttribute("userId");
+        int teamId = query.getTeam(id);
+        TeamInfoBean teamInfoBean = new TeamInfoBean();
+        teamInfoBean.setId(teamId);
+        request.setAttribute("teamInfoBean", teamInfoBean);
+        request.setAttribute("teamId", teamId);
         if (query.checkTeamAdmin(id)) {
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/teams/myTeamMenu/myTeamMenuAdmin.jsp")

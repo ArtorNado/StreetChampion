@@ -135,5 +135,21 @@
         <servlet-name>TrueAnswerServlet</servlet-name>
         <url-pattern>/trueanswer</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>EnterTeamServlet</servlet-name>
+        <servlet-class>teams.EnterTeam.EnterTeamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EnterTeamServlet</servlet-name>
+        <url-pattern>/enterteam</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>registration.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -18,11 +18,12 @@ public class PlayerInfoServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Query query = new Query();
-        String name = request.getParameter("name");
-        int raiting = query.getUserRaiting(name);
-        int curVoice = query.getUserCurVoice(name);
-        double avarageRaiting = query.getUserAvarageRaiting(name);
-        PlayerBean playerBean = new PlayerBean(name,raiting,curVoice, avarageRaiting);
+        String login = request.getParameter("name");
+        int age = query.getUserAge(login);
+        String firstName = query.getUserFirstName(login);
+        String secondName = query.getUserSecondName(login);
+        double avarageRaiting = query.getUserAvarageRaiting(login);
+        PlayerBean playerBean = new PlayerBean(login, firstName, secondName, age, avarageRaiting);
         request.setAttribute("playerBean", playerBean);
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/players/playerInfo.jsp")

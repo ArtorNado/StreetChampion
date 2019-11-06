@@ -16,7 +16,7 @@
     <p>Name: ${team.name}</p>
     <p name = "id" value="${team.id}">Id: ${team.id} </p>
     <input type="button" onClick="location.href='/allplayers?name=${team.id}'" value="Squad" >
+    <input type="button" onClick="location.href='/enterteam?name=${team.id}'" value="Enter" >
 </form>
-
 </body>
 </html>

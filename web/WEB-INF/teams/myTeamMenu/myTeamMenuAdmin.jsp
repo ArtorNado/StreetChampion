@@ -12,8 +12,9 @@
 </head>
 <body>
 
-<form method="post" action="/myteamsquad">
-    <input type="submit" value="Squad">
+<form method="get" <%--action="/myteamsquad?id=${teamInfoBean.id}"--%>>
+    <%--<input type="submit" value="Squad">--%>
+    <input type="button" onClick="location.href='/myteamsquad?id=${teamInfoBean.id}'" value="Squad" >
 </form>
 
 <form method="post" action="/notifications">

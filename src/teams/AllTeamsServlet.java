@@ -14,11 +14,8 @@ import java.util.ArrayList;
 @WebServlet(name = "AllTeamsServlet")
 public class AllTeamsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
         Query query = new Query();
-        response.setContentType("text/html;charset=utf-8");
         ArrayList teams = new ArrayList();
-
         teams = query.getAllTeam(teams);
         request.setAttribute("teams", teams);
         getServletContext()

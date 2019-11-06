@@ -1,5 +1,7 @@
 package teams;
 
+import dbWorker.Query;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,10 +15,13 @@ import java.util.List;
 @WebServlet(name = "FreeTeamsServlet")
 public class FreeTeamsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        response.setContentType("text/html;charset=utf-8");
-        ArrayList teams = new ArrayList();
-
+        Query query = new Query();
+        ArrayList freeTeams = new ArrayList();
+        freeTeams = query.getFreeTeam(freeTeams);
+        request.setAttribute("freeTeams", freeTeams);
+        getServletContext()
+                .getRequestDispatcher("/WEB-INF/teams/freeTeams.jsp")
+                .forward(request, response);
 
 
     }

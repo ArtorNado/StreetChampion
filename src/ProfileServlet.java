@@ -1,6 +1,8 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import dbWorker.DBworker;
 import dbWorker.Query;
 import logInBean.LogInBean;
+import players.PlayerBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,19 +30,33 @@ public class ProfileServlet extends HttpServlet {
         String[] value = request.getParameterValues("checkBox");
         if (value != null) {
             if (value[0].equals("on")) {
-                cookies.createCookies(request,response,login,password);
+                cookies.createCookies(request, response, login, password);
 
             }
         }
         LogInBean logInBean = new LogInBean(login, password);
+        int age = query.getUserAge(login);
+        String firstName = query.getUserFirstName(login);
+        String secondName = query.getUserSecondName(login);
+        double avarageRaiting = query.getUserAvarageRaiting(login);
+        int teamId = query.getTeam(userId);
+        System.out.println("teamdId" + teamId);
+        PlayerBean playerBean = new PlayerBean(firstName, secondName, age, avarageRaiting);
         HttpSession session = request.getSession();
+        int check = 1;
+        if( query.checkTeam(userId) == null) {
+             check = -1;
+        }
         session.setAttribute("userId", userId);
         session.setAttribute("userName", login);
         if ((login != null) && (query.searchUser(login)) && ((password.equals(userPassword)))) {
-                request.setAttribute("userr", logInBean);
-                getServletContext()
-                        .getRequestDispatcher("/WEB-INF/profilePage/profile.jsp")
-                        .forward(request, response);
+            request.setAttribute("teamId", teamId);
+            request.setAttribute("check", check);
+            request.setAttribute("userr", logInBean);
+            request.setAttribute("userData", playerBean);
+            getServletContext()
+                    .getRequestDispatcher("/WEB-INF/profilePage/profile.jsp")
+                    .forward(request, response);
         } else {
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/LoginPage/login.jsp")

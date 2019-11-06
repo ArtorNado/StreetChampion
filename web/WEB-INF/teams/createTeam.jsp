@@ -11,11 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-
 <form method="get" action="/createteam">
     Name <input type="text" name="nameOfNewTeam" value="">
     <input type="submit" value="Create">
 </form>
-
 </body>
 </html>
